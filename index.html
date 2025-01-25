@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра в кальмара</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать в игру!</h1>
+        <p class="description">
+            Привет! Это сайт "Игра в кальмара". Здесь вы можете играть, останавливать игру и выходить. 
+            Оставляйте отзывы и делитесь своими впечатлениями! 🎮🦑
+        </p>
+        <button id="playButton">Играть</button>
+        <button id="stopButton" disabled>Стоп</button>
+        <button id="exitButton">Выйти</button>
+
+        <!-- Блок с радугой -->
+        <div class="rainbow"></div>
+
+        <!-- Раздел с персонажами -->
+        <div class="characters-section">
+            <h2>Персонажи</h2>
+            <p>Узнайте больше о главных героях сериала.</p>
+            <a href="characters.html" class="see-more-button">Подробнее о персонажах</a>
+        </div>
+
+        <!-- Раздел с играми -->
+        <div class="games-section">
+            <h2>Игры из сериала</h2>
+            <div class="game-list">
+                <div class="game-item">
+                    <h3>1. Красный свет, зелёный свет</h3>
+                    <p>
+                        Участники должны добраться до финиша, пока звучит зелёный свет. 
+                        Когда звучит красный свет, все должны замереть. Кто пошевелится — выбывает.
+                    </p>
+                    <button class="play-game-button" data-game="red-light-green-light">Играть</button>
+                </div>
+                <div class="game-item">
+                    <h3>2. Далгона</h3>
+                    <p>
+                        Участники должны вырезать фигуру из медовой конфеты (далгоны), 
+                        не повредив её. Кто сломает фигуру — выбывает.
+                    </p>
+                    <button class="play-game-button" data-game="dalgona">Играть</button>
+                </div>
+                <!-- Остальные игры -->
+            </div>
+        </div>
+
+        <!-- Раздел для отзывов -->
+        <div class="feedback-section">
+            <h2>Оставьте ваш отзыв</h2>
+            <form id="feedbackForm">
+                <input type="text" id="nameInput" placeholder="Ваше имя" required>
+                <textarea id="commentInput" placeholder="Ваш отзыв" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+
+            <h2>Отзывы</h2>
+            <div id="feedbackList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
